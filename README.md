@@ -1,5 +1,7 @@
-ArtCanvas.js
+ArtCanvas
 =========
+  
+[![Build Status](https://travis-ci.org/Korilakkuma/ArtCanvas.svg?branch=master)](https://travis-ci.org/Korilakkuma/ArtCanvas)
   
 HTML5 Canvas Library
   
@@ -9,7 +11,7 @@ This library enables to create image authoring application like Photoshop.
 In concrete, this library may be useful to implement the following features.
   
 * Layer
-* Draw (Pen, Figure, Text ..etc)
+* Draw (Pen, Figure, Text ...etc)
 * Styles (Color, Line Width, Text Styles ...etc)
 * Transforms (Translate, Scale, Rotate)
 * Tools for drawing
@@ -18,11 +20,23 @@ In concrete, this library may be useful to implement the following features.
   
 * [Art Canvas](http://korilakkuma.github.io/ArtCanvas/)
   
+## Installation
+  
+    $ npm install art-canvas
+  
+or,
+  
+    $ bower install art-canvas
+  
 ## Usage
   
 The 1st, ArtCanvas class is required.
   
     <script type="text/javascript" src="ArtCanvas.js"></script>
+  
+or,
+  
+    <script type="text/javascript" src="ArtCanvas.min.js"></script>
   
 Next, the instance of ArtCanvas must be created.  
 ArtCanvas constructor requires 4 arguments.  
@@ -197,11 +211,12 @@ It is required that color string (hex, rgb, hsl, rgba, hsla ...etc) is designate
 #### Text style
   
     var fontFamily = 'Helvetica';
+    var fontSize   = '24px';
     var fontStyle  = 'oblique';
-    var fontSize   = '24px'
+    var fontWeight = 'bold';
 
     // Create the instance of ArtCanvas.Font
-    var font = new ArtCanvas.Font(fontFamily, fontStyle, fontSize);
+    var font = new ArtCanvas.Font(fontFamily, fontSize, fontStyle, fontWeight);
 
     // color string (hex, rgb, hsl, rgba, hsla ...etc)
     var color = 'rgba(153, 153, 153, 1.0)';
@@ -284,4 +299,9 @@ Next, it is required to designate transform type.
     };
 
     artCanvas.export(format, callback);
+  
+## License
+  
+Copyright (c) 2012, 2013, 2014 Tomohiro IKEDA (Korilakkuma)  
+Released under the MIT license
   
